@@ -7,10 +7,8 @@ df = pd.read_csv('unemployment analysis.csv')
 years = [str(y) for y in range(1991, 2022)]
 df_numeric = df.set_index('Country Name')[years]
 
-
 plt.figure(figsize=(20, 14))
 plt.suptitle("Visualisasi Analisis Pengangguran Global", fontsize=22, fontweight='bold')
-
 
 ax1 = plt.subplot(2, 2, 1)
 recent_years = [str(y) for y in range(2015, 2022)]
@@ -60,6 +58,6 @@ sns.heatmap(
 ax4.set_title('Heatmap Korelasi (2010–2021)', fontsize=14)
 ax4.set_xticklabels(ax4.get_xticklabels(), rotation=0)
 ax4.set_yticklabels(ax4.get_yticklabels(), rotation=0)
-plt.tight_layout(rect=[0, 0, 1, 0.96])
 
+plt.tight_layout(rect=[0, 0, 1, 0.96])
 plt.show()
